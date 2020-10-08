@@ -14,7 +14,7 @@ window.onload = function () {
     // 1 - get reference to the board
     const bingoBoard = document.querySelector('#bingo-board');
     // array to store the fired numbers
-    let firedNumbers = [];
+    const firedNumbers = [];
 
     for (i = 1; i <= 76; i++) {
         // 2- creating the boardCell
@@ -42,16 +42,17 @@ window.onload = function () {
     fireButton.addEventListener('click', function () {
         console.log('I can fire!!!'); // works
         //8- random number function
-        let randomizeNumber = function () {
+        const randomizeNumber = function () {
             return Math.ceil(Math.random() * 76);
-            console.log(randomizeNumber()); //works
-
         }
+        console.log(randomizeNumber()); //works
         //9- in order to update the board i need to take reference to it (already did in the higher scope)
 
 
         // 10- call the randomizeNumber() and catch it's value
         const randomNumber = randomizeNumber();
+
+        /*
         // EXTRA1: 
         // the value return should always be different
         // i need to store the first value fired 
@@ -85,6 +86,7 @@ window.onload = function () {
 
 
         }
+        */
 
         //11 highlight the number on the board (will need to be parsInted) which is equal to the randomizeNumber() and apply the css class .output-number to highlight it
 
