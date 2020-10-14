@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="fire-button">Fire</button>
+
+
+    <script>
+        window.onload = function () {
+            const firedNumbers = [];
+            const safeFiredNumbers = []
+            let btnClicks = 0;
+
+
+            console.log(firedNumbers);
+
+            const fireButton = document.querySelector('#fire-button');
+            fireButton.addEventListener('click', function () {
+                btnClicks += 1
+                console.log(btnClicks);
+                const randomizeNumber = function () {
+                    return Math.ceil(Math.random() * 76);
+                }
+                const randomNumber = randomizeNumber()
+
+                // if (btnClicks <= 1) {
+                //     firstfiredNumber.push(randomNumber)
+                // } else {
+                //     for (let suca of firedNumbers) {
+                //         if (suca !== randomNumber) {
+                //             safeFiredNumbers.push(suca)
+                //         }
+
+                //     }
+                // }
+                // console.log(safeFiredNumbers);
+                const uniqueRandomNumber = function () {
+                    firedNumbers.push(randomNumber)
+
+                    for (let element of firedNumbers) {
+                        let counter = 0
+                        if (element === randomNumber) {
+                            counter += 1
+                        }
+                    }
+
+                    if (counter <= 1)
+
+                }
+
+
+
+
+
+
+
+
+                // const randomNumber = randomizeNumber();
+
+                // firedNumbers.push(randomNumber)
+                // console.log('i fired this: ', randomNumber);
+                // console.log(firedNumbers);
+                // for (let firedElement of firedNumbers) {
+                //     if (firedElement !== randomNumber) {
+                //         firedNumbers.push(randomNumber)
+                //     }
+                // }
+                // console.log('Array of fired Numbers', firedNumbers);
+
+
+                /*
+                const extraRandomNumber = function () {
+                    // first i fire the number
+                    
+                    console.log('this click fired this number:', randomNumber);
+                    // check if the fired number already exists in the array of fired numbers
+                    // a loop is needed to iterate the fired numbers
+                   
+
+                    for (let element of firedNumbers) {
+                        if (element === randomNumber) {
+                            firedNumbers.push(randomNumber)
+                        } else {
+                            // to the next iteration
+                            continue;
+                        }
+                    }
+
+                    console.log('array after firing', firedNumbers);
+                    // now, each time i fire, i store that value in the array, unless is already present
+
+                    // now i need another loop to go through the firenumbers and check if the current fired number is there, if its not i should return another number and add it into the array
+
+
+
+
+                }
+                extraRandomNumber()
+                */
+
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+        }
+    </script>
+</body>
+
+</html>
